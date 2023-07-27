@@ -10,7 +10,6 @@ function App() {
   useEffect(() => {
     axios.get('http://localhost:5000/api/activities')
       .then(response => {
-        console.log(response);
         setActivities(response.data);
       })
   }, [])
@@ -23,7 +22,6 @@ function App() {
             <List.Item key={activity.id}>{activity.title}</List.Item>
           ))}
         </List>
-        <Button content='test'/>
     </div>
   );
 }
